@@ -31,6 +31,8 @@ FILL IN
 ```
 Assuming that you already have the necessary databases installed for MySQL, mongoDB, and Neo4J, you would need to modify the code in the mysql_utils.py, mongodb_utils.py, and neo4j_utils.py files to ensure that the connections to the databases are compatible with your machine. 
 
+
+(You may need to delete "pymongo[srv]" from requirements.txt)
 Then, you should install the requirements by running:
   
   pip install -r requirements.txt
