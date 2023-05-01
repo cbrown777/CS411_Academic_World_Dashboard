@@ -20,8 +20,7 @@ Connor Brown repo for CS411 Project - Academic World Dashboard
 ## Demo
 ```
 
-
-FILL IN 
+https://mediaspace.illinois.edu/media/t/1_5j7smkjd
 
 
 ```
