@@ -1,0 +1,8 @@
+dash
+pandas
+mysql
+mysql-connector-python
+"pymongo[srv]"
+pymongo
+neo4j
+plotly==5.14.1
