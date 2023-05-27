@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def getNames(_relation_name):
-    cnx = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
     query_get_keywords = ("SELECT name FROM {}".format(_relation_name))
     cursor_one = cnx.cursor()
     cursor_one.execute(query_get_keywords)
@@ -24,7 +24,7 @@ def getNames(_relation_name):
 
 
 def add_user_favorite_professor(prof_name):
-    cnx_four = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx_four = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
 
     # RETRIEVE ID QUERY
     query_get_user_favorite_prof_id = ("SELECT id FROM faculty WHERE name = '{0}'".format(prof_name))
@@ -43,7 +43,7 @@ def add_user_favorite_professor(prof_name):
     cnx_four.close()
 
     # Make a NEW Connection for the INSERT!
-    cnx_six = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx_six = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
     cursor_six = cnx_six.cursor()
 
     # INSERT QUERY
@@ -64,7 +64,7 @@ def add_user_favorite_professor(prof_name):
 
 #***COME back to this
 def add_user_favorite_keyword(keyword_name):
-    cnx_four = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx_four = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
 
     # RETRIEVE ID QUERY
     query_get_user_favorite_keyword_id = ("SELECT id FROM keyword WHERE name = '{0}'".format(keyword_name))
@@ -83,7 +83,7 @@ def add_user_favorite_keyword(keyword_name):
     cnx_four.close()
 
     # Make a NEW Connection for the INSERT!
-    cnx_six = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx_six = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
     cursor_six = cnx_six.cursor()
 
     # INSERT QUERY
@@ -106,7 +106,7 @@ def add_user_favorite_keyword(keyword_name):
 
 def get_keyword_years_and_publication_counts(keyword):
 
-    cnx_two = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx_two = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
 
     query_keyword_years_and_pubs_count = ("SELECT year, count(*) FROM publication WHERE year >= 2000 AND id IN "
          "( SELECT publication_id FROM publication_keyword WHERE keyword_id IN "
@@ -135,7 +135,7 @@ def get_keyword_years_and_publication_counts(keyword):
 
 #Return top 10 professors with KRC for keyword 'machine_learning'
 def get_krc_profs_ranking_by_keyword(keyword):
-    cnx_three = mysql.connector.connect(user='root', password='Yanks8893!', host='localhost', database='academicworld')
+    cnx_three = mysql.connector.connect(user='root', password='password', host='localhost', database='academicworld')
 
 
     query_krc_profs_ranking = \
